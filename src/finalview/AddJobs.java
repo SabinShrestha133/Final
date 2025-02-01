@@ -203,6 +203,11 @@ public class AddJobs extends javax.swing.JFrame {
         jToggleButton1.setBackground(new java.awt.Color(51, 153, 255));
         jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton1.setText("Post Your Job");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -393,6 +398,83 @@ public class AddJobs extends javax.swing.JFrame {
     private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField11ActionPerformed
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        // TODO add your handling code here:
+                try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/job_portal", "root", "admin123");
+        } catch (ClassNotFoundException | SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Database Connection Failed: " + ex.getMessage());
+        }
+    }
+    
+    public void addJob(String jobTitle, String jobCategory, int vacancies, String employmentType, String jobLocation, 
+                        double offeredSalary, String qualification, String experience, String gender, 
+                        String vehiclePossession, String applyDeadline) {
+        try {
+            String query = "INSERT INTO jobs (job_title, job_category, no_of_vacancies, employment_type, job_location, "
+                    + "offered_salary, qualification, experience, gender, vehicle_possession, apply_deadline) "
+                    + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            
+            pst = con.prepareStatement(query);
+            pst.setString(1, jobTitle);
+            pst.setString(2, jobCategory);
+            pst.setInt(3, vacancies);
+            pst.setString(4, employmentType);
+            pst.setString(5, jobLocation);
+            pst.setDouble(6, offeredSalary);
+            pst.setString(7, qualification);
+            pst.setString(8, experience);
+            pst.setString(9, gender);
+            pst.setString(10, vehiclePossession);
+            pst.setString(11, applyDeadline);
+            
+            int rowsAffected = pst.executeUpdate();
+            if (rowsAffected > 0) {
+                JOptionPane.showMessageDialog(null, "Job Added Successfully");
+            } else {
+                JOptionPane.showMessageDialog(null, "Failed to Add Job");
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error: " + ex.getMessage());
+        } finally {
+            try {
+                if (pst != null) pst.close();
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(null, "Error Closing Statement: " + ex.getMessage());
+            }
+        }
+    }
+    
+    public void closeConnection() {
+        try {
+            if (con != null) con.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error Closing Connection: " + ex.getMessage());
+        }
+    }
+    
+    public void handleAddJobButton(javax.swing.JTextField txtJobTitle, javax.swing.JTextField txtJobCategory, 
+                                   javax.swing.JTextField txtVacancies, javax.swing.JTextField txtEmploymentType, 
+                                   javax.swing.JTextField txtJobLocation, javax.swing.JTextField txtOfferedSalary, 
+                                   javax.swing.JTextField txtQualification, javax.swing.JTextField txtExperience, 
+                                   javax.swing.JTextField txtGender, javax.swing.JTextField txtVehiclePossession, 
+                                   javax.swing.JTextField txtApplyDeadline) {
+        if (txtJobTitle.getText().equals("") || txtJobCategory.getText().equals("") || txtVacancies.getText().equals("") ||
+            txtEmploymentType.getText().equals("") || txtJobLocation.getText().equals("") || txtOfferedSalary.getText().equals("") ||
+            txtQualification.getText().equals("") || txtExperience.getText().equals("") || txtGender.getText().equals("") ||
+            txtVehiclePossession.getText().equals("") || txtApplyDeadline.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "All fields are required");
+        } else {
+            addJob(txtJobTitle.getText(), txtJobCategory.getText(), Integer.parseInt(txtVacancies.getText()),
+                   txtEmploymentType.getText(), txtJobLocation.getText(), Double.parseDouble(txtOfferedSalary.getText()),
+                   txtQualification.getText(), txtExperience.getText(), txtGender.getText(),
+                   txtVehiclePossession.getText(), txtApplyDeadline.getText());
+        }
+    }
+}
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
      * @param args the command line arguments

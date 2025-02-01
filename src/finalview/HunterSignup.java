@@ -4,6 +4,13 @@
  */
 package finalview;
 
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author NITRO V
@@ -51,7 +58,6 @@ public class HunterSignup extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 112, 153));
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 500));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\tandu\\OneDrive\\Documents\\NetBeansProjects\\Rojagar Kendra\\src\\Icon\\Rojgarkendralogo.jpg")); // NOI18N
         jLabel1.setText("jLabel1");
 
         jLabel5.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
@@ -132,6 +138,11 @@ public class HunterSignup extends javax.swing.JFrame {
         SignUpButton.setFont(new java.awt.Font("Britannic Bold", 1, 18)); // NOI18N
         SignUpButton.setForeground(new java.awt.Color(255, 255, 255));
         SignUpButton.setText("Create Account");
+        SignUpButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SignUpButtonActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Sans Serif Collection", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(102, 102, 102));
@@ -205,7 +216,7 @@ public class HunterSignup extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JobHunter, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JobGiver))
@@ -290,6 +301,66 @@ public class HunterSignup extends javax.swing.JFrame {
         give.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_JobGiverActionPerformed
+
+    private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpButtonActionPerformed
+        // TODO add your handling code here:
+        if(txtname.getText().equals("")){
+        JOptionPane.showMessageDialog(this,"All Field is required");
+        txtname.requestFocus();
+        }  
+    else if(txtemail.getText().equals("")){
+         JOptionPane.showMessageDialog(this,"All Field is required");
+         txtemail.requestFocus();
+    }
+    else if(txtpassword.getText().equals("")){
+        JOptionPane.showMessageDialog(this,"All Field is required");
+        txtpassword.requestFocus();
+        }
+    else if(txtconfirmpassword.getText().equals("")){
+        JOptionPane.showMessageDialog(this,"All Field is required");
+        txtconfirmpassword.requestFocus();
+        }
+    else{    
+    PreparedStatement pst=null;
+    Statement st=null;
+    ResultSet rs=null;
+    java.sql.Connection con=null;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/job_portal","root","admin123");
+           // st=con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
+            pst=con.prepareStatement("select * from giver_signup where email=?");
+            pst.setString(1, txtemail.getText());
+            rs=pst.executeQuery();
+            if(rs.next()){
+                JOptionPane.showMessageDialog(this,"Use Another Email ID");
+                txtemail.requestFocus();
+            }
+            else{
+           //      try {
+            //Class.forName("com.mysql.cj.jdbc.Driver");
+            //con=DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel","root","Sudhir@123");
+            pst=con.prepareStatement("insert into signup(name,email,password,confirmpassword )values(?,?,?,?,?)");
+            pst.setString(1, txtname.getText());
+            pst.setString(2, txtemail.getText().toLowerCase());
+            pst.setString(3, txtpassword.getText());
+            pst.setString(4, jComboBox1.getItemAt(jComboBox1.getSelectedIndex()));
+            pst.setString(5, txtans.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Registered Successfully\nLogin Now");
+           new give().setVisible(true);  
+       // } catch (SQLException ex) {
+            //Logger.getLogger(Record.class.getName()).log(Level.SEVERE, null, ex);
+       // }
+                
+                
+            }
+            
+        } catch (ClassNotFoundException | SQLException ex) {
+           //Logger.getLogger(Record.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    }//GEN-LAST:event_SignUpButtonActionPerformed
 
     /**
      * @param args the command line arguments

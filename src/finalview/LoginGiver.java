@@ -1,9 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package finalview;
 
+
+import finalview.GiverSignup;
+import finalview.LoginHunter;
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 /**
  *
  * @author NITRO V
@@ -124,6 +132,11 @@ public class LoginGiver extends javax.swing.JFrame {
         LoginButton.setFont(new java.awt.Font("Rockwell", 1, 24)); // NOI18N
         LoginButton.setForeground(new java.awt.Color(255, 255, 255));
         LoginButton.setText("Login");
+        LoginButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginButtonActionPerformed(evt);
+            }
+        });
 
         JobHunter.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
         JobHunter.setText("Job hunter");
@@ -255,9 +268,19 @@ public class LoginGiver extends javax.swing.JFrame {
         Giver.setLocationRelativeTo(null);
     }//GEN-LAST:event_JobGiverActionPerformed
 
+    private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
+        // TODO add your handling code here:
+
+    }
+    }//GEN-LAST:event_LoginButtonActionPerformed
+    public static void main(String args[]) {
+
+    }
+
     /**
      * @param args the command line arguments
      */
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -266,15 +289,16 @@ public class LoginGiver extends javax.swing.JFrame {
     public javax.swing.JButton JobGiver;
     public javax.swing.JButton JobHunter;
     private javax.swing.JPanel Left;
-    private javax.swing.JButton LoginButton;
+    public javax.swing.JButton LoginButton;
     public javax.swing.JLabel LoginLogoLabel;
     public javax.swing.JPasswordField PasswordField;
     public javax.swing.JLabel PasswordLabel;
     private javax.swing.JPanel Right;
     public javax.swing.JLabel SignUpLabel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel2;
+    public javax.swing.JLabel jLabel6;
+    public javax.swing.JLabel jLabel8;
     // End of variables declaration//GEN-END:variables
-}
+
+

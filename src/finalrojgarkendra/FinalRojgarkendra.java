@@ -8,10 +8,10 @@ package finalrojgarkendra;
 //import finalview.ApplicationProposal;
 //import finalview.EmployeeDashboard;
 //import finalview.JobDescription;
-import finalview.EmployeerDashboard;
+//import finalview.EmployeerDashboard;
 //import finalview.GiverSignup;
 //import finalview.HunterSignup;
-//import finalview.LoginGiver;
+//  import finalview.LoginGiver;
 //import finalview.LoginHunter;
 
 /**
@@ -47,11 +47,11 @@ public class FinalRojgarkendra {
 //        give.pack();
 //        give.setLocationRelativeTo(null);
 //        
-        EmployeerDashboard ab = new EmployeerDashboard();
-        ab.setVisible(true);
-        ab.pack();
-        ab.setLocationRelativeTo(null);
-        
+//        EmployeerDashboard ab = new EmployeerDashboard();
+//        ab.setVisible(true);
+//        ab.pack();
+//        ab.setLocationRelativeTo(null);
+//        
 //        EmployeeDashboard bc = new EmployeeDashboard();
 //        bc.setVisible(true);
 //        bc.pack();

@@ -70,7 +70,6 @@ public class EmployeeDashboard extends javax.swing.JFrame {
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
 
@@ -227,7 +226,7 @@ public class EmployeeDashboard extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\tandu\\OneDrive\\Documents\\NetBeansProjects\\Rojagar Kendra\\src\\Icon\\Rojgarkendralogo.jpg")); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\tandu\\OneDrive\\Documents\\NetBeansProjects\\FinalRojgarkendra\\src\\Pictures\\softwaricalogo.jpg")); // NOI18N
 
         jLabel11.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 18)); // NOI18N
         jLabel11.setText("Futsal Coach");
@@ -244,8 +243,8 @@ public class EmployeeDashboard extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12)
@@ -280,7 +279,7 @@ public class EmployeeDashboard extends javax.swing.JFrame {
         jLabel16.setText("Gyaneswor, Kathmandu");
 
         jLabel17.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel17.setText("Code Everest Pvt.Ltd");
+        jLabel17.setText("Rojgar Kendra ");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -288,7 +287,7 @@ public class EmployeeDashboard extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel16)
@@ -315,25 +314,25 @@ public class EmployeeDashboard extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel18.setIcon(new javax.swing.ImageIcon("C:\\Users\\tandu\\OneDrive\\Documents\\NetBeansProjects\\Rojagar Kendra\\src\\Icon\\Rojgarkendralogo.jpg")); // NOI18N
+        jLabel18.setIcon(new javax.swing.ImageIcon("C:\\Users\\tandu\\OneDrive\\Documents\\NetBeansProjects\\FinalRojgarkendra\\src\\Pictures\\friendscafe.jpg")); // NOI18N
 
         jLabel19.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 18)); // NOI18N
-        jLabel19.setText("Futsal Coach");
+        jLabel19.setText("Head Chief");
 
         jLabel20.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel20.setText("Mahakavi Marg, Kathmandu");
 
         jLabel21.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel21.setText("Softwarica College of IT");
+        jLabel21.setText("Friends Cafe and Bar");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(20, 20, 20)
+                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel20)
@@ -359,16 +358,16 @@ public class EmployeeDashboard extends javax.swing.JFrame {
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel22.setIcon(new javax.swing.ImageIcon("C:\\Users\\tandu\\OneDrive\\Documents\\NetBeansProjects\\Rojagar Kendra\\src\\Icon\\Rojgarkendralogo.jpg")); // NOI18N
+        jLabel22.setIcon(new javax.swing.ImageIcon("C:\\Users\\tandu\\OneDrive\\Documents\\NetBeansProjects\\FinalRojgarkendra\\src\\Pictures\\fqsoft.jpg")); // NOI18N
 
         jLabel23.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 18)); // NOI18N
-        jLabel23.setText("Futsal Coach");
+        jLabel23.setText("Frontend Developer");
 
         jLabel24.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel24.setText("Mahakavi Marg, Kathmandu");
+        jLabel24.setText("Group Tower, Lalitpur");
 
         jLabel25.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel25.setText("Softwarica College of IT");
+        jLabel25.setText("F1Soft International");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -376,13 +375,13 @@ public class EmployeeDashboard extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel24)
-                    .addComponent(jLabel25))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel25)
+                    .addComponent(jLabel23))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -496,12 +495,6 @@ public class EmployeeDashboard extends javax.swing.JFrame {
         jLabel32.setForeground(new java.awt.Color(255, 255, 255));
         jLabel32.setText("Quick Links");
 
-        jButton7.setBackground(new java.awt.Color(0, 112, 153));
-        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("Home");
-        jButton7.setBorder(null);
-
         jButton8.setBackground(new java.awt.Color(0, 112, 153));
         jButton8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton8.setForeground(new java.awt.Color(255, 255, 255));
@@ -525,10 +518,9 @@ public class EmployeeDashboard extends javax.swing.JFrame {
                     .addComponent(jLabel31)
                     .addComponent(jLabel30)
                     .addComponent(jLabel29))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 619, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel32)
-                    .addComponent(jButton7)
                     .addComponent(jButton8)
                     .addComponent(jButton9))
                 .addGap(333, 333, 333))
@@ -543,14 +535,13 @@ public class EmployeeDashboard extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel29)
-                    .addComponent(jButton7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel30)
                     .addComponent(jButton8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel31)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel30)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel31))
                     .addComponent(jButton9))
                 .addContainerGap(47, Short.MAX_VALUE))
         );
@@ -633,7 +624,6 @@ public class EmployeeDashboard extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
